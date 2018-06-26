@@ -4,6 +4,8 @@ function [sumXY, areaCurve]= betaSpread(meanPSF_G, fS)
 %currently ignoring anything less than zero, double check necessity of this
 
 
+if nargin < 2 || isempty(fS), fS = 6; end
+
 %fS=6;
 sqSz=(fS*2+1)*(fS*2+1);
 psf1=meanPSF_G(1:sqSz);
